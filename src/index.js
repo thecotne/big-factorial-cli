@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const ora = require('ora')
 const childProcess = require('child_process')
 
