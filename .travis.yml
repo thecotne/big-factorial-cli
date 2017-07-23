@@ -6,10 +6,13 @@ notifications:
   email: false
 node_js:
   - '6'
+before_install:
+  - yarn global add greenkeeper-lockfile@1
 before_script:
-  - npm prune
+  - greenkeeper-lockfile-update
 after_success:
-  - npm run semantic-release
+  - greenkeeper-lockfile-upload
+  - yarn semantic-release
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
