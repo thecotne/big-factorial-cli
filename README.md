@@ -14,6 +14,15 @@
 
 simple cli for [big-factorial](https://www.npmjs.com/package/big-factorial) package
 
+you can watch [DEMO](#demo) or read [Getting started](#getting-started) guide
+
+## DEMO
+
+if your lazy to test this package yourself watch me do it for you
+
+[![asciicast](https://asciinema.org/a/feeRJ0y0PnqueWsd1Jr9NXgcY.png)](https://asciinema.org/a/feeRJ0y0PnqueWsd1Jr9NXgcY)
+
+
 ## Getting started
 
 install `big-factorial-cli` globally
