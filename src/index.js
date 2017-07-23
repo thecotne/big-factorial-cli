@@ -17,9 +17,13 @@ function bigFactorial (number) {
 
 const number = parseInt(process.argv[2])
 
-const spinner = ora(`Calculating factorial for ${number}`).start()
+if (!Number.isNaN(number)) {
+  const spinner = ora(`Calculating factorial for ${number}`).start()
 
-bigFactorial(number)
-  .then(result => {
-    spinner.succeed(`Calculating factorial for ${number} is ${result}`)
-  })
+  bigFactorial(number)
+    .then(result => {
+      spinner.succeed(`Calculating factorial for ${number} is ${result}`)
+    })
+} else {
+  console.log('you need to pass number as parameter')
+}
