@@ -1,23 +1,43 @@
 {
   "name": "big-factorial-cli",
-  "main": "index.js",
-  "bin": {
-    "big-factorial-cli": "index.js"
+  "description": "simple cli for big-factorial package",
+  "keywords": [
+    "big-factorial",
+    "factorial"
+  ],
+  "homepage": "https://github.com/thecotne/big-factorial-cli#readme",
+  "bugs": {
+    "url": "https://github.com/thecotne/big-factorial-cli/issues"
   },
+  "license": "MIT",
+  "author": "cotne nazarashvili <cotne.nazarashvili@gmail.com>",
   "files": [
     "src"
   ],
-  "scripts": {
-    "test": "eslint src",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  "main": "index.js",
+  "bin": {
+    "big-factorial-cli": "src/index.js"
   },
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thecotne/big-factorial-cli.git"
+  },
+  "scripts": {
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "test": "eslint src"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/mol-conventional-changelog"
+    }
+  },
   "dependencies": {
     "big-factorial": "^1.0.2",
     "mol-conventional-changelog": "^1.2.0",
     "ora": "^1.3.0"
   },
   "devDependencies": {
+    "@thecotne/release-notes-generator": "^1.2.1",
     "eslint": "^4.3.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.7.0",
@@ -26,13 +46,7 @@
     "eslint-plugin-standard": "^3.0.1",
     "semantic-release": "^6.3.6"
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/mol-conventional-changelog"
-    }
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/thecotne/big-factorial-cli.git"
+  "release": {
+    "generateNotes": "node_modules/@thecotne/release-notes-generator"
   }
 }
