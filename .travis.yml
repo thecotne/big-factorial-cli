@@ -6,6 +6,7 @@ notifications:
   email: false
 node_js:
   - '6'
+  - '8'
 before_install:
   - yarn global add greenkeeper-lockfile@1
 before_script:
